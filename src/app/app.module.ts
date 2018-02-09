@@ -37,6 +37,7 @@ const appRoutes: Routes = [
   {path:'rooms',component:RoomsComponent},
   {path:'tours',component:ToursComponent},
   {path:'contact',component:ContactComponent},
+  {path:'reserve',component:ReserveComponent},
 ]
 
 @NgModule({

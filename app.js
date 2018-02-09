@@ -54,7 +54,7 @@ app.use(express.static(__dirname + '/dist'));
 
 /*------------------Routing Started ------------------------*/
 app.get('/.well-known/acme-challenge/:content', function (req, res) {
-    res.send('Ue4l2TZBSc0xJtnKu_03XXuQH6Uff4SJeofCPTVGsgA')
+    res.send('L2xYiYb9o3lgSgM5KKBZQHCqaEqU0CbUWozKVD_W__o')
 })
 
 // http://www.ecolodgeccatan.com/.well-known/acme-challenge/

@@ -25,7 +25,6 @@ import { ToursComponent } from './components/tours/tours.component';
 import { RoomsComponent } from './components/rooms/rooms.component';
 import { ReserveComponent } from './components/reserve/reserve.component';
 import { ReviewCarouselComponent } from './components/home/review-carousel/review-carousel.component';
-import { ReserveRoomComponent } from './components/rooms/reserve-room/reserve-room.component';
 import { EmailValidatorDirective } from './shared/email-validator.directive';
 import { ReservesuccessComponent } from './components/reservesuccess/reservesuccess.component';
 import { EmailsuccessComponent } from './components/emailsuccess/emailsuccess.component';
@@ -38,7 +37,6 @@ const appRoutes: Routes = [
   {path:'rooms',component:RoomsComponent},
   {path:'tours',component:ToursComponent},
   {path:'contact',component:ContactComponent},
-  {path:'reserve',component:ReserveComponent},
 ]
 
 @NgModule({

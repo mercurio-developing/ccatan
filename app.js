@@ -53,6 +53,11 @@ app.use(express.static(__dirname + '/dist'));
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
+app.get('/.well-known/acme-challenge/:content', function (req, res) {
+    res.send('Ue4l2TZBSc0xJtnKu_03XXuQH6Uff4SJeofCPTVGsgA')
+})
+
+// http://www.ecolodgeccatan.com/.well-known/acme-challenge/
 
 app.post('/sendmail', function (req, res) {
     

@@ -32,12 +32,17 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 
 //Router
 const appRoutes: Routes = [
+  {path:'', redirectTo: 'home', pathMatch: 'full' },
   {path:'',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'rooms',component:RoomsComponent},
   {path:'tours',component:ToursComponent},
   {path:'contact',component:ContactComponent},
   {path:'reserve',component:ReserveComponent},
+  {path:'reservesuccess',component: ReservesuccessComponent },
+  {path:'emailsuccess',component: EmailsuccessComponent },
+  {path:'404', component: NotfoundComponent },
+  {path:'**', redirectTo: '/404' }
 ]
 
 @NgModule({

@@ -1,0 +1,106 @@
+.button{
+  background:orange;
+  color:black;
+  padding:10px 30px 10px 25px;
+  margin-right: 50px;
+  border-color:rgba(160, 128, 106, 1)
+}
+
+p {
+	background-color:rgba(255,255,255,0.8);
+	opacity: 0.8;
+	color:black;
+  padding: 10px 10px 10px 10px;
+}
+
+.animated {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
+.animated-1 {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.animated-2 {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDownBig {
+  animation-name: fadeInDownBig;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@media only screen and (max-width : 768px) {
+      p{
+        font-size: 18px;
+      }
+    }

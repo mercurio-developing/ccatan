@@ -1,0 +1,46 @@
+.logo {
+    width:250px;
+    height: 250px;
+}
+
+.logo-1 {
+    width:200px;
+    height: 200px;
+}
+
+@media only screen and (max-width : 1200px) {
+	
+        .logo-1 {
+            width:175px;
+            height: 175px;
+        }
+	
+	  }
+
+@media only screen and (max-width : 992px) {
+
+        .logo{
+            width:200px;
+            height: 200px;
+        }
+
+    }
+
+	@media only screen and (max-width : 768px) {
+		
+        .logo {
+            width:250px;
+            height: 250px;
+        }
+	
+
+		}
+		
+	  @media only screen and (max-width : 480px) {
+			
+        .logo {
+            width:250px;
+            height: 250px;
+        }
+	 
+	  }    

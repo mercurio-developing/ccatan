@@ -1,0 +1,65 @@
+h1{
+	font-family: Permanent Marker;
+}
+
+.card{
+	border:none;
+}
+.card-text{
+	font-size:18px;
+}
+.jumbo {
+	height: 450px;
+	width: 1200px;
+}
+
+
+@media only screen and (max-width : 1200px) {
+	
+		.main h1{
+			font-size:42px;
+		}
+		
+		p {
+			font-size: 24px;
+		}
+	
+	  }
+	  
+	@media only screen and (max-width : 992px) {
+			
+			.main h1{
+				font-size:28px;
+			}
+			
+			p {
+				font-size: 14px;
+			}
+	
+	
+	  }    
+	
+	 @media only screen and (max-width : 768px) {
+		
+			.main h1{
+				font-size:28px;
+			}
+			
+			p {
+				font-size: 14px;
+			}
+	
+
+		}
+		
+	  @media only screen and (max-width : 480px) {
+			
+			.main h1{
+				font-size:28px;
+			}
+			
+			p,.card-text {
+				font-size: 14px;
+			}
+	
+		}

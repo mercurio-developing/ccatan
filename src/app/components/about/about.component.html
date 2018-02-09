@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="row d-none d-sm-none d-md-block d-lg-block">
+		<img class="img-fluid jumbo" src="assets/img/jumbo/about-jumbotron.jpg" alt="">
+ 	</div>
+ 	<div class="row m-3 m-sm-4 m-md-4 m-lg-5">
+		<div class="col-lg-12 border-0 p-0">
+	 		<div class="card  border-0">
+			  <div class="card-body main">
+			    <blockquote class="blockquote mb-0 text-center">
+			    <h1>Welcome To Ccatán</h1>
+			      <p>
+					Ccatán is the ideal place to be in contact with nature in the comfort
+					of a good hostal. Visit Ccatán and enjoy the natural beauty of the
+					Urubamba countryside.
+					</p>
+			    </blockquote>
+			  </div>
+			</div>
+	 	</div>
+ 	</div>
+ 	<div class="row m-lg-4">
+ 	<div class="container pl-0">
+		<div class="col-12 col-lg-12">
+				<div class="card m-lg-2 mx-auto">
+				  <div class="card-body">
+				    <h2 class="card-title">About Ccatán</h2>
+				    <p class="card-text">
+							Ecolodge Ccatan nace en el anio 2000 en el Valle Sagrado de los Incas, Urubamba - Cusco, 
+							cumpliendo un suenio familiar ya que somos una familia nativa del lugar, amantes de la naturaleza,
+							gustosos de compartir nuestras costumbres y riqueze cultural con nuestros huespedes.
+							Nuestra atencion es personalizada con experiencia y calidez, con el objetivo de garantizarles
+							el confort en su estadia.
+							<br>
+							<br>
+							Ecolodge Ccatan es un alojamiento inmerso en la naturaleza construido con materiales de la zona como la piedra,
+							madera, barro y paja, creando espacios de armonia con la naturaleza y un ambiente calido complementantadose con las 
+							montanias sagradas que nos circundan, garantizando a nuestros huespedes una placentera y tranquila estadia disfrutando de
+							sus hermosos jardines y paisajes que ofrece el Ecolodge. Ubicados estrategicamente en el corazon del Valle Sagrado punto de
+							partida para visitar centros arqueologicos como: Pisac, Chincheros, Salineras, Moray, Cusco y Machu Picchu.
+							</p>
+				  </div>
+				</div>
+			</div>
+							<div class="container-fluid d-none d-sm-none d-md-block d-lg-block d-xl-block">
+								<div class="row">
+									<div class="col-12">
+										<img *ngFor="let photo of photos" class="w-50 h-30 p-1" (click)="openSlide($event)" [src]="photo" alt="">
+									</div>
+								</div>
+							</div>
+		</div>
+	</div>
+  </div>

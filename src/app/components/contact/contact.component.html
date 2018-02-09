@@ -1,0 +1,59 @@
+<div class="container back">
+  <div class="col-12"></div>    
+	<div class="row d-none d-sm-none d-md-block d-lg-block">
+    <img class="img-fluid jumbo" src="assets/img/jumbo/contact-jumbotron.jpg" alt="">
+  </div>
+  <div class="row p-3 p-sm-4 p-md-4 p-lg-5">    
+    <div class="col-md-12 border-0 p-0">
+        <div class="card border-0">
+            <div class="card-body main">
+              <blockquote class="blockquote mb-0 text-center">
+                <h1>Contact Us</h1>
+                <p>We are happy to answer any questions you may have.</p>
+              </blockquote>
+            </div>
+        </div>
+      </div>
+  </div>
+  <div class="row offset-md-1">
+    <div class="pl-lg-5 mt-sm-5 col-lg-12">
+        <div class="well well-sm">
+          <form #contact="ngForm" class="mb-5" (ngSubmit)="onSubmit(contact.value)">
+          <fieldset>
+            <legend class="text-left"><h2>Contact us</h2></legend>
+            <!-- Name input-->
+              <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Name</label>
+              <div class="col-md-9">
+                <input [ngClass]="{ 'has-danger': name.invalid && (name.dirty || name.touched), 'has-success': name.valid && (name.dirty || name.touched)}" type="text" class="form-control" required (ngModel)="name" name="name" placeholder="Enter Name" #name="ngModel">
+              </div>
+            </div>
+            <!-- Email input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">Your E-mail</label>
+              <div class="col-md-9">
+                <input [ngClass]="{ 'has-danger': email.invalid && (email.dirty || email.touched), 'has-success': email.valid && (email.dirty ||
+                email.touched)}" type="text" emailvalidator class="form-control" required (ngModel)="this.email" name="email" placeholder="Enter email"
+                   #email="ngModel">  
+                </div>
+            </div>
+            <!-- Message body -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message">Your message</label>
+              <div class="col-md-9">
+                  <textarea  [ngClass]="{ 'has-danger': textarea.errors?.minlength, 'has-success':textarea.valid}" placeholder="Enter message" #textarea="ngModel" class="form-control" required minlength="5" maxlength="1000" (ngModel)="this.message" rows="5" name="message">
+                  </textarea>
+              </div>
+            </div>
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-right mr-5">
+                <button type="submit" [disabled]="!contact.form.valid" class="btn btn-primary btn-lg float-right">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>      
+</div>

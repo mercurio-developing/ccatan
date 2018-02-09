@@ -1,0 +1,311 @@
+h1{
+	font-family: Permanent Marker;
+}
+
+li{
+	font-weight: bold;
+}
+
+.button-reserve {
+	    padding:10px 30px 10px 25px;
+		font-size:16px;
+		background:orange;
+		color:black;
+   		border-color:rgba(160, 128, 106, 1)
+}
+
+.card-footer{
+	background-color:rgba(61, 77, 30,0.6);
+}
+
+.jumbo {
+	height: 450px;
+	width: 1200px;
+}
+
+.padd{
+	margin-top:auto;
+}
+
+.shadow {
+	box-shadow: 11px 10px 21px -8px rgba(0,0,0,1);
+}
+
+.card-header:hover .title {
+  top: 90px;
+}
+
+.back{
+	background-color:rgba(160, 128, 106, 10,0.3);
+}
+
+.button {
+  position: absolute;
+  width: 500px;
+  left:26%;
+  top: 20%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.button p {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+  background-color:rgba(158, 128, 106, 0.5);
+}
+
+.card-header:hover .button {
+  opacity: 1;
+}
+
+@media only screen and (max-width : 1200px) {
+
+		.button {
+		  position: absolute;
+		  width: 500px;
+		  left:21%;
+		  top: 20%;
+		  text-align: center;
+		  opacity: 0;
+		  transition: opacity .35s ease;
+		}	
+
+		.main h1{
+			font-size:32px;
+		}
+		
+		p {
+			font-size: 14px;
+		}
+
+  }
+ @media only screen and (max-width : 992px) {
+		
+		.main h1{
+			font-size:28px;
+		}
+		
+		p {
+			font-size: 14px;
+		}
+
+		.button {
+		  position: absolute;
+		  width: 500px;
+		  left:33%;
+		  top: 30%;
+		  text-align: center;
+		  opacity: 0;
+		  transition: opacity .35s ease;
+		}	
+
+  }    
+
+ @media only screen and (max-width : 768px) {
+	
+		.main h1{
+			font-size:28px;
+		}
+		
+		p {
+			font-size: 14px;
+		}
+
+		.button {
+		  position: absolute;
+		  width: 500px;
+		  left:28%;
+		  top: 25%;
+		  text-align: center;
+		  opacity: 0;
+		  transition: opacity .35s ease;
+		}	
+	}
+	
+  @media only screen and (max-width : 480px) {
+		
+		.main h1{
+			font-size:28px;
+		}
+		
+		p {
+			font-size: 14px;
+		}
+
+		.button {
+		  position: absolute;
+		  width: 500px;
+		  left:17%;
+		  top: 15%;
+		  text-align: center;
+		  opacity: 0;
+		  transition: opacity .35s ease;
+		}	
+  }
+    
+/*gallery*/
+
+.on {
+	background-color: red;
+}
+
+.off {
+	background-color: yellow;
+	display:none;
+}
+
+.above{
+	width: 100%;
+	height: 100%;
+			position: fixed;
+			top: 0%;
+			left:0%;
+	z-index: 1;
+	padding: 100px 100px 100px 100px;
+	background-color: rgba(211,211,211, 0.8);
+}
+
+.above img{
+	width: 100%;
+	height: 88%;
+
+}
+
+.btn-left{
+	position: absolute;
+	top: 50%;
+	left:5%;
+	opacity: 0.5;
+	font-size:24px;
+}
+
+.btn-right{
+	position: absolute;
+	top: 50%;
+	right:5%;   
+	opacity: 0.5;
+	font-size:24px;
+
+}
+
+.btn-exit{
+	opacity: 0.5;
+	margin-left: 10px;
+}
+
+.btn-left:hover{
+	opacity: 1;
+}
+
+.btn-right:hover{
+	opacity: 1;
+}
+
+.btn-exit:hover{
+	opacity: 1;
+}
+
+.container{
+	z-index: 0.5
+}
+
+@media (max-width: 576px) {
+    
+    .above img{
+        height: 100%;
+    }
+    
+    .btn-left{
+        position: absolute;
+            top: 50%;
+            left:30%;
+    }
+    
+    .btn-right{
+        position: absolute;
+            top: 50%;
+            right:30%;   
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .above img{
+        height: 100%;
+    }
+    
+    .btn-left{
+        position: fixed;
+            top: 50%;
+            left:5%;
+    }
+    
+    .btn-right{
+        position: fixed;
+            top: 50%;
+            right:5%;   
+    }
+}
+
+@media (max-width: 992px) {
+
+    .above img{
+        height: 100%;
+    }
+
+    
+    .btn-left{
+        position: absolute;
+            top: 30%;
+            left:5%;
+    }
+    
+    .btn-right{
+        position: absolute;
+            top: 30%;
+            right:5%;   
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .above img{
+        height: 100%;
+    }
+
+
+    .btn-left{
+        position: absolute;
+            top: 50%;
+            left:5%;
+    }
+    
+    .btn-right{
+        position: absolute;
+            top: 50%;
+            right:5%;   
+    }
+}
+@media (min-width: 1200px) {
+
+    .above img{
+        height: 87%;
+    }
+
+    .btn-left{
+        position: absolute;
+            top: 40%;
+            left:5%;
+    }
+    
+    .btn-right{
+        position: absolute;
+            top: 40%;
+            right:5%;   
+    }
+}

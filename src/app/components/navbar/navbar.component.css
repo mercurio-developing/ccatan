@@ -1,0 +1,21 @@
+a {
+	color:white;
+	font-size: 18px;
+}
+
+.back{
+	background-color:rgba(158, 128, 106, 0.5);
+}
+
+.icon-collapse{
+	width: 32px;
+	height:32px;
+}
+
+.reserve{
+	    padding:10px 30px 10px 25px;
+		font-size:16px;
+		background:orange;
+		color:black;
+   		border-color:rgba(160, 128, 106, 1)
+}

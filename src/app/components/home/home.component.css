@@ -1,0 +1,199 @@
+p{
+    text-align: center;
+}
+
+/*Tour Col */
+
+.img-tours{
+    width: 700px;
+    height: 350px;
+}
+.tour-row{
+    background-color: rgba(160, 128, 106, 0.1);
+    margin:0px;
+}
+.tour-button{
+    position: absolute;
+    top:70%;
+    right:-2%;
+    background:orange;
+    color:black;
+    padding:10px 30px 10px 25px;
+    margin-right: 50px;
+    border-color:rgba(160, 128, 106, 1)
+}
+
+.caption {
+    top:0%;
+    left:-3%;
+    position: absolute;
+    width: 100%;
+}
+
+               
+/*About Col */
+
+.tripadvisor{
+    width: 100px;
+    height: 100px;
+}
+
+.about-button {
+    top:41%;
+    right:6%;
+    position: absolute;
+    background:orange;
+    color:black;
+    padding:10px 30px 10px 25px;
+    border-color:rgba(160, 128, 106, 1)
+}
+
+.caption2 {
+    top:20%;
+    left:0%;
+    position: absolute;
+    width: 96%;
+}
+
+.caption2 p{
+    font-size: 28px;
+    margin: 0px;  
+}
+
+/* queries */
+
+@media only screen and (max-width : 1200px) {
+
+/* tour */
+    .caption {
+        top:0%;
+        left:-3%;
+        position: absolute;
+    }
+
+    .caption p{
+        font-size: 24px;
+    }  
+
+    .tour-button{
+        top:65%;
+        right:-3%;
+        position: absolute;
+      }  
+
+  /* about */
+
+    .caption2 p{
+        font-size: 24px;
+    }  
+
+    .about-button{
+        top:35%;
+        right:7%;
+        position: absolute;
+    }  
+    }
+
+ 
+    @media only screen and (max-width : 992px) {
+        
+        /* tour */
+
+        .caption {
+            top:0%;
+            left:-3%;
+            position: absolute;
+        }
+
+        .caption p{
+            font-size: 34px;
+        }
+        .tour-button{
+            top:67%;
+            right:-2%;
+        }
+        /* about */
+
+        
+        .caption2 {
+            top:35%;
+            left:2%;
+            position: absolute;
+        }
+
+        .caption2 p{
+            font-size: 34px;
+        }  
+
+        .about-button{
+            top:70%;
+            right:5%;
+            position: absolute;
+        } 
+    }
+
+@media only screen and (max-width : 768px) {
+    /* tour */
+    .caption {
+            top:0%;
+            left:-7%;
+            position: absolute;
+        }
+      .caption p{
+        font-size: 32px;
+      }
+      .tour-button{
+        top:57%;
+        right:-4%;
+      }
+    /* about   */
+      .caption2 {
+            top:35%;
+            left:2%;
+            position: absolute;
+        }
+      .caption2 p{
+        font-size: 32px;
+      }  
+
+      .about-button{
+        top:60%;
+        right:5%;
+        position: absolute;
+      }  
+    }
+
+@media only screen and (max-width : 480px) {
+    /* tour  */
+    .caption {
+            top:0%;
+            left:-10%;
+            position: absolute;
+      }
+      .caption p{
+        font-size: 18px;
+      }  
+      .tour-button{
+        top:38%;
+        right:-8%;
+      }
+    /* about */
+    .caption2 {
+        top:15%;
+        left:3%;
+        position: absolute;
+    }
+
+    .caption2 p{
+        font-size: 20px;
+    }  
+
+    .about-button{
+        top:37%;
+        right:7%;
+        position: absolute;
+    }
+}
+
+
+

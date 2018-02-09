@@ -1,0 +1,97 @@
+<div class="container pb-5 back">
+	<div class="row d-none d-sm-none d-md-block d-lg-block">
+		<img class="img-fluid jumbo" src="assets/img/jumbo/reserve-jumbotron.jpg" alt="">
+	</div>
+    <div class="row p-3 p-sm-4 p-md-4 p-lg-5">
+        <div class="col-md-12 border-0 p-0">
+        <div class="card border-0">
+        <div class="card-body main">
+          <blockquote class="blockquote mb-0 text-center">
+          <h1>Reserve Your Room</h1>
+          <p>Let us know when you will be arriving and what kind of
+			room you would like to book. Reserve now, pay when you
+			arrive.</p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+ <form #contact="ngForm" (ngSubmit)="onSubmit(contact.value)">
+	<div class="row p-2 pl-2 p-sm-5 p-md-0">
+              <div class="col-md-10 offset-md-1">
+                    <div class="row mt-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-5">
+                            <label>First Name</label>
+                            <input [ngClass]="{ 'has-danger': firstname.invalid && (firstname.dirty || firstname.touched), 'has-success': firstname.valid && (firstname.dirty || firstname.touched)}"
+                            type="text" class="form-control w-75" required (ngModel)="this.firstname" name="firstname" placeholder="Enter Firstname" #firstname="ngModel">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-5">
+                            <label>Last Name</label>
+                            <input [ngClass]="{ 'has-danger': lastname.invalid && (lastname.dirty || lastname.touched), 'has-success': lastname.valid && (lastname.dirty || lastname.touched)}"
+                            type="text" class="form-control w-75" required (ngModel)="this.lastname" name="lastname" placeholder="Enter Lastname" #lastname="ngModel">
+                        </div>
+                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-5">
+                            <label>Phone</label>
+                            <input pattern="[0-9]*" minlength="10" maxlength="10" [ngClass]="{ 'has-danger': phone.invalid && (phone.dirty || phone.touched), 'has-success': phone.valid && (phone.dirty || phone.touched)}"
+                            type="text" class="form-control w-75" required (ngModel)="this.phone" name="phone" placeholder="Enter Phone" #phone="ngModel">
+                            <div [hidden]="phone.valid || phone.pristine" class="alert alert-danger w-75">
+                            <div [hidden]="!phone.hasError('minlength')">Mobile should be 10digit</div>
+                            <div [hidden]="!phone.hasError('required')">Mobile is required</div>
+                            <div [hidden]="!phone.hasError('pattern')">Mobile numberr should be only numbers</div>
+                        </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-5">
+                            <label>E-mail</label>
+                            <input [ngClass]="{ 'has-danger': email.invalid && (email.dirty || email.touched), 'has-success': email.valid && (email.dirty ||
+                            email.touched)}" type="text" emailvalidator class="form-control w-75" required (ngModel)="this.email" name="email"
+                            placeholder="Enter email" #email="ngModel">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-5">
+                            <label>Number of Adults</label>
+                            <input [ngClass]="{ 'has-danger': nAdults.invalid && (nAdults.dirty || nAdults.touched), 'has-success': nAdults.valid && (nAdults.dirty || nAdults.touched)}"
+                            type="number" maxlength="2" class="form-control w-75" required (ngModel)="this.nadults" name="nAdults" placeholder="Number of Adults" #nAdults="ngModel">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-5">
+                            <label>Children (under 12)</label>
+                            <input [ngClass]="{ 'has-danger': nChilds.invalid && (nChilds.dirty || nChilds.touched), 'has-success': nChilds.valid && (nChilds.dirty || nAdults.touched)}"
+                                type="number" maxlength="2" class="form-control w-75" required (ngModel)="this.nChilds" name="nChilds" placeholder="Number of Childs" #nChilds="ngModel">
+                            </div>                      
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-2 ">
+                            <label>Check-in Date</label>
+                            <input ng-required="true" [ngClass]="{ 'has-danger': checkin.invalid && (checkin.dirty || checkin.touched), 'has-success': checkin.valid && (checkin.dirty
+                            || checkin.touched)}" type="text" class="form-control w-75 " required (ngModel)="this.checkin" name="checkin"  #checkin="ngModel" [matDatepicker]="checkin">
+                            <mat-datepicker-toggle [for]="checkin"></mat-datepicker-toggle>
+                            <mat-datepicker #checkin></mat-datepicker>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-2">
+                            <label>Check-out Date</label>
+                            <input ng-required="true" [ngClass]="{ 'has-danger': checkout.invalid && (checkout.dirty || checkout.touched), 'has-success': checkout.valid && (checkout.dirty
+                            || checkout.touched)}" type="text" class="form-control w-75" required (ngModel)="this.checkout" name="checkout"  #checkout="ngModel" [matDatepicker]="checkout">                            
+                            <mat-datepicker-toggle [for]="checkout"></mat-datepicker-toggle>
+                            <mat-datepicker #checkout></mat-datepicker>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-5">
+                            <label>Preferred Room Type</label>
+                            <select class="form-control" id="roomType" [(ngModel)]="reserverRoom" [ngModelOptions]="{standalone: true}">
+                                <option [value]="'Bungalow Familiar'">Bungalow Familiar</option>
+                                <option [value]="'Cabania de Lux'">Cabania de Lux</option>
+                                <option [value]="'Matrimonial c/ balcon'">Matrimonial c/ balcon</option>
+                                <option [value]="'Familiar'">Familiar</option>
+                            </select>
+                        </div>                        
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pb-3">
+                            <label>Message</label>
+                            <textarea [ngClass]="{ 'has-danger': textarea.errors?.minlength, 'has-success':textarea.valid}" placeholder="Enter message" #textarea="ngModel" class="form-control  mr-lg-5 w-auto h-100" required minlength="5" maxlength="1000" (ngModel)="this.message" rows="5" name="message">
+                            </textarea>
+                            <small class="text-muted">
+                              Add the packaging note here.
+                            </small>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2 mt-5 text-right">
+                             <button type="submit" [disabled]="!contact.form.valid" class="btn btn-primary btn-lg float-right">Submit</button>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+        </form>     
+     </div>

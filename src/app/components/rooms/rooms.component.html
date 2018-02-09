@@ -1,0 +1,78 @@
+ <div class="container">
+	<div class="row d-none d-sm-none d-md-block d-lg-block">
+		<img class="img-fluid jumbo" src="assets/img/jumbo/rooms-jumbotron.jpg" alt="">
+ 	</div>
+ 	<div class="row mt-4 m-sm-4 m-md-4 m-lg-5">
+		<div class="col-lg-12 border-0 p-0">
+	 		<div class="card border-0">
+			  <div class="card-body main">
+			    <blockquote class="blockquote mb-0">
+				<h1 class="text-center mt-0 mb-4">OUR ROOMS</h1>
+			      <p>
+					Whether you are travelling solo or with family we have the right
+					room for you. Each room has a private or shared bathroom with
+					24/7 hot water and internet. A delicious Andean breakfast is included with each room.
+					</p>
+					<br>
+					<p>Nuestras habitaciones son muy calidas y acojedoras, con ventanas amplias e iluminacion natural. Ventanas desde las cuales
+						puedes disfrutar los paisajes que el Valle Sagrado ofrece.
+					</p>
+				<br>
+			    </blockquote>
+			  </div>
+			</div>
+	 	</div>
+	 </div>
+	 <div class="row m-lg-5" *ngIf="showGallery" >
+				<div class="container-fluid">
+					<div class="row">
+						<div *ngFor="let photo of photos" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-1 p-sm-1 p-md-1 p-lg-2 p-xl-2 p-0 mx-auto">
+							<img  class="img-fluid" (click)="openSlide($event)" [src]="photo" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid above p-2 p-xl-2" *ngIf="enableView">
+					<button class="btn btn-exit" (click)="enableView = false">X</button>
+					<div class="row">
+					<div class="col-1 d-none d-sm-inline d-md-inline d-lg-inline d-xl-inline text-center">
+							<button class="btn-left btn float-left" (click)="moveToLeft()"> < </button>
+						</div>
+						<div class="col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 p-0"><img [src]="selectedPhoto" alt=""></div>
+						<div class="col-1 d-none d-sm-inline d-md-inline d-lg-inline d-xl-inline text-center">
+							<button class="btn-right btn float-right" (click)="moveToRight()"> > </button>
+						</div>
+						<div class="row mt-2 w-100 d-inline d-sm-none d-md-none d-lg-none d-xl-none">
+							<div class="col-4 mx-auto">
+								<div class="row">
+										<div class="col-1 p-0 mx-auto">
+											<button class="btn" (click)="moveToRight()"> < </button>
+										</div>
+										<div class="col-1 p-0 mx-auto">
+											<button class="btn" (click)="moveToLeft()"> > </button>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		<button class="btn btn-primary button-reserve mt-4"><a (click)="back()"><< Back</a> </button>
+	 </div>
+ 	<div class="row m-lg-5 mb-5" *ngIf="!showGallery" >
+	 		<div *ngFor="let room of rooms; let i = index" class="col-12 col-sm-11 m-sm-4 col-md-11 m-md-4 col-lg-5 card-item text-center">
+	 			    <div class="card shadow w-100 h-100">
+			 			  <div class="card-header">
+			 			  	   <img class="img-fluid" src={{room.url}}>
+						   	   <div class="overlay"></div>
+							   <div class="button text-center" (click)="showSelected(i)"><p>View Gallery</p></div>
+			 			  </div>
+					  <div class="card-block h-100 m-4">
+					    <h2 class="card-title">{{room.type}}</h2>
+					    <p class="card-text">{{room.description}}</p>
+					  </div>
+					  <div [ngClass]="{padd:room.optional == 'none'}" class="card-footer p-4 back">
+					    <a (click)="reserveRoom($event)" class="btn btn-primary button-reserve ">Reserve Now</a>
+				 	</div>
+			    </div>
+	 		</div>
+ 	</div>
+ </div>

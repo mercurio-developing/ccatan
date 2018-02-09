@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+.jumbo {
+	height: 350px;
+	width: 1200px;
+}
+
+.back{
+	background-color:rgba(158, 128, 106, 0.3);
+}
+
+.bor {
+	border:1px solid black;
+}
+

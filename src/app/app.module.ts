@@ -33,7 +33,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 //Router
 const appRoutes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full' },
-  {path:'',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'rooms',component:RoomsComponent},
   {path:'tours',component:ToursComponent},

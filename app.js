@@ -6,10 +6,10 @@ var nodemailer = require("nodemailer");
 var bodyParser = require('body-parser');
 var path = require('path');
 var cors = require('cors');
-var forceSsl = require('force-ssl-heroku');
+// var forceSsl = require('force-ssl-heroku');
 var app = express();
 app.use(cors())
-app.use(forceSsl);
+// app.use(forceSsl);
 
 
 // configuration ===========================================

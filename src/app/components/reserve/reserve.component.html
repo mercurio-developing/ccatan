@@ -9,7 +9,7 @@
           <blockquote class="blockquote mb-0 text-center">
           <h1>Reserve Your Room</h1>
           <p>Let us know when you will be arriving and what kind of
-			room you would like to book. Reserve now, pay when you
+			room you would like to book. Make a reservation request now, pay when you
 			arrive.</p>
           </blockquote>
         </div>
@@ -18,6 +18,7 @@
   </div>
  <form #contact="ngForm" (ngSubmit)="onSubmit(contact.value)">
 	<div class="row p-2 pl-2 p-sm-5 p-md-0">
+
               <div class="col-md-10 offset-md-1">
                     <div class="row mt-4">
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-5">
@@ -74,7 +75,7 @@
                             <label>Preferred Room Type</label>
                             <select class="form-control" id="roomType" [(ngModel)]="reserverRoom" [ngModelOptions]="{standalone: true}">
                                 <option [value]="'Bungalow Familiar'">Bungalow Familiar</option>
-                                <option [value]="'Cabania de Lux'">Cabania de Lux</option>
+                                <!-- <option [value]="'Cabaña de Lux'">Cabania de Lux</option> -->
                                 <option [value]="'Matrimonial c/ balcon'">Matrimonial c/ balcon</option>
                                 <option [value]="'Familiar'">Familiar</option>
                             </select>
@@ -84,7 +85,8 @@
                             <textarea [ngClass]="{ 'has-danger': textarea.errors?.minlength, 'has-success':textarea.valid}" placeholder="Enter message" #textarea="ngModel" class="form-control  mr-lg-5 w-auto h-100" required minlength="5" maxlength="1000" (ngModel)="this.message" rows="5" name="message">
                             </textarea>
                             <small class="text-muted">
-                              Add the packaging note here.
+                                <p class="m-0" style="color:red;opacity:0.5;">*ATENCION ESTE ES UN PEDIDO DE RESERVA, ESPERE CONFIRMACION DEL HOSTEL POR TELEFONO O EMAIL.</p>
+                                <p style="color:red;opacity:0.5;">*ATTENTION PLEASE!!,THIS IS A RESERVATION REQUEST, WAIT FOR CONFIRMATION FROM THE HOTEL BY TELEPHONE OR EMAIL.</p>
                             </small>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2 mt-5 text-right">

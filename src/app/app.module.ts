@@ -73,7 +73,7 @@ const appRoutes: Routes = [
     CarouselModule.forRoot(),
     RouterModule.forRoot(appRoutes,{useHash:true}),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDv-5yhc2a1xORKcsYRCq1XrXVwUUo6igQ'
+      apiKey: 'AIzaSyAqmmEdrv2Mx9SnFSvnM0ptkLrSGwHQ8sY'
     }),
     MatDatepickerModule,
     MatNativeDateModule

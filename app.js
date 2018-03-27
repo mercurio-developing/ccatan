@@ -18,8 +18,8 @@ var smtpTransport = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
     auth: {
-        user: "clarividenciafotografia@gmail.com        ",
-        pass: "yuraqrumi"
+        user: "stmpccatan@gmail.com",
+        pass: "ccatan123"
     },tls: {
         // do not fail on invalid certs
         rejectUnauthorized: false
@@ -56,18 +56,28 @@ app.get('/.well-known/acme-challenge/:content', function (req, res) {
     res.send('L2xYiYb9o3lgSgM5KKBZQHCqaEqU0CbUWozKVD_W__o.8d4kxirupueEDLH_EkaGNpcFaHZwxi4TuzQDJhCPxsM')
 })
 
-
-// http://www.ecolodgeccatan.com/.well-known/acme-challenge/
-
-app.post('/sendmail', function (req, res) {
+app.post('/reserve', function (req, res) {
     
-    console.log(req.body)
-    
+    let checkin = req.body.checkin.slice(0, 10);
+    let checkout = req.body.checkout.slice(0, 10);
+
     var mailOptions = {
-        from: req.body.email, 
-        subject: 'CLARIVIDENCIA contact', 
-        html: '<h1>CLARIVIDENCIA CONTACT</h1></br><div><p><b>MESSAGE:</br></b>'+req.body.message+' </div><div><b>Nombre de cliente:</b> '+req.body.name +'</p></div><div><p><b>Email:</b> '+req.body.email +'</p></div>', // html body
-        to: 'clarividenciafotografia@gmail.com'
+        from: 'stmpccatan@gmail.com', 
+        subject: 'ECO LODGE CCATAN RESERVE!!', 
+        html: `<h1>CCATAN RESERVA</h1></br>
+        <div><p><b>Primer Nombre:${req.body.firstname}</b></p></div>
+        <div><p><b>Segundo Nombre:${req.body.lastname}</b></p></div>
+        <div><p><b>Telefono:${req.body.phone}</b></p></div>
+        <div><p><b>Email:${req.body.email}</b></p></div>
+        <div><p><b>Numero de Adultos:${req.body.nAdults}</b></p></div>
+        <div><p><b>Numero de chicos:${req.body.nChilds}</b></p></div>
+        <div><p><b>Check-in:${checkin}</b></p></div>
+        <div><p><b>Check-out:${checkout}</b></p></div>
+        <div><p><b>Message:${req.body.message}}</b></p></div>
+        <br>
+        <div><p style="color:red;"><b>ATENCION ESTA ES UNA COPIA DE SU PEDIDO DE RESERVA, ESPERE CONFIRMACION DEL HOSTEL POR TELEFONO O EMAIL.</b></p></div>
+        <div><p style="color:red;"><b>ATTENTION PLEASE THIS IS A COPY OF YOUR RESERVATION REQUEST, WAIT FOR CONFIRMATION FROM THE HOTEL BY TELEPHONE OR EMAIL.</b></p></div>`,
+        to: `ecolodgeccatan@gmail.com,${req.body.email}`
     }
 
     smtpTransport.sendMail(mailOptions, function (error, info) {
@@ -82,6 +92,30 @@ app.post('/sendmail', function (req, res) {
         });
     });
 });
+
+
+app.post('/sendemail', function (req, res) {
+
+    var mailOptions = {
+        from: 'stmpccatan@gmail.com', 
+        subject: 'ECO LODGE CCATAN contact',
+        html: '<h1>CCATANA CONTACT</h1></br><div><p><b>MESSAGE:</br></b>' + req.body.message + ' </div><div><b>Nombre de cliente:</b> ' + req.body.name + '</p></div><div><p><b>Email:</b> ' + req.body.email + '</p></div>', // html body
+        to: 'ecolodgeccatan@gmail.com'
+    }
+
+    smtpTransport.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            emailMessage = "there was an error :-(, and it was this: " + error.message;
+        } else {
+            emailMessage = "Message sent: " + info.response;
+        }
+        return res.json({
+            message: "success",
+            email: emailMessage
+        });
+    });
+});
+
 
 /*--------------------Routing Over----------------------------*/
 

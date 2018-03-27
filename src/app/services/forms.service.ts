@@ -11,8 +11,9 @@ export class FormService {
   errors;
 
   sendEmail(dataEmail) {
-    this.http.post('https://ccatanecolodge.herokuapp.com:443/sendmail', dataEmail)
+    this.http.post('http://localhost:3000/sendemail', dataEmail)
       .subscribe((data) => {
+        console.log(data)
       },
       error => {
         this.errors = error;
@@ -23,8 +24,9 @@ export class FormService {
   }
 
   sendReserve(dataReserve) {
-    this.http.post('https://ccatanecolodge.herokuapp.com:443/sendreserve', dataReserve)
+    this.http.post('http://localhost:3000/reserve', dataReserve)
       .subscribe((data) => {
+        console.log(data)
       },
       error => {
         this.errors = error;

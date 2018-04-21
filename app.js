@@ -53,7 +53,7 @@ app.use(express.static(__dirname + '/dist'));
 
 /*------------------Routing Started ------------------------*/
 app.get('/.well-known/acme-challenge/:content', function (req, res) {
-    res.send('6JlYkbjUEhpZQj0Hs5pzfNnw8UDu3r4n5T1e8cuugXU')
+    res.send('-l-Wd0nAFK7x2TXoZUu7zMmXG2MCit0x0JbukkCEXjU.8d4kxirupueEDLH_EkaGNpcFaHZwxi4TuzQDJhCPxsM')
 })
 
 app.post('/reserve', function (req, res) {
